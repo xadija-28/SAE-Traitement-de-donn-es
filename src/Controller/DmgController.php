@@ -15,4 +15,11 @@ class DmgController extends AbstractController
             'controller_name' => 'DmgController',
         ]);
     }
+    #[Route('/Blog', name: 'Blog')]
+    public function Blog()
+    {
+        return $this->render('dmg/Blog.html.twig', [
+            'controller_name' => 'DmgController',
+        ]);
+    }
 }
