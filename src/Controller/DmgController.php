@@ -15,10 +15,10 @@ class DmgController extends AbstractController
             'controller_name' => 'DmgController',
         ]);
     }
-    #[Route('/dmg/Cv', name: 'app_dmg_Cv')]
-    public function CV(): Response
+    #[Route('/Cv', name: 'Cv')]
+    public function Cv()
     {
-        return $this->render('dmg/Cv.html.twig', [
+        return $this->render('dmg/cv.html.twig', [
             'controller_name' => 'DmgController',
         ]);
     }
