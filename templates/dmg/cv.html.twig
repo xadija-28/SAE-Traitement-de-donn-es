@@ -13,33 +13,35 @@
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
-
-    <h1>Curriculum Vitae</h1>
-    </header>
-    
+    </head>
+ {% block body %}
     <section>
  <div> 
     <h4>Admistrateur Reseaux et Telecommunication <h4>
-        <div> 
+        <div class="contener"> 
             <h3> Formations <h3>
-            <p> </p>
+            <p> -Annee 2022-en cours: Bachelor Universitaire Technologique Reseaux et Telecommunication<br> 
+            -Annee 2018-2021: Licence Professinelle Reseaux et Telecommunications<br>
+            -Annee 2016-2018: Diplome Universitaire des sciences et techniques: DEUST<br>
+            -Annee 2016: Baccalaureat General en serie Scientique</p>
 
         </div>
 
 
-    <div>
+    <div class="contener">
 
         <h3>Experience professionnel <h3>
        
-        <p> </p>
+        <p>De Juin 2022 a Aout 2022 Stage en entreprise Dans le domaine de l'assurance 
+        </p>
 
     </div>
 
-    <div> 
+    <div class="contener"> 
  
         <h3>Competences <h3>
         
-        <p> </p>
+        <p>-Bonne matrise du langage C <br>-configurer des switch-PowerPoint-excel <br>-google sheets-putty-html-css </p>
  
     </div>
 
@@ -48,3 +50,4 @@
 
 
     </head>
+{%endblock%}
