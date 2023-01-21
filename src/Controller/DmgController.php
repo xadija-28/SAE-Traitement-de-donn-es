@@ -30,7 +30,7 @@ class DmgController extends AbstractController
             'controller_name' => 'DmgController',
         ]);
     }
-    #[Route('/dmg/porfolio', name: 'app_dmg_porfolio')]
+    #[Route('/dmg/portfolio', name: 'app_dmg_portfolio')]
     public function loisi(): Response
     {
         return $this->render('dmg/portfolio.html.twig', [
