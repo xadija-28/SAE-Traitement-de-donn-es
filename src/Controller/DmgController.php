@@ -30,4 +30,11 @@ class DmgController extends AbstractController
             'controller_name' => 'DmgController',
         ]);
     }
+    #[Route('/dmg/portfolio', name: 'app_dmg_portfolio')]
+    public function portfolio(): Response
+    {
+        return $this->render('dmg/portfolio.html.twig', [
+            'controller_name' => 'DmgController',
+        ]);
+    }
 }
