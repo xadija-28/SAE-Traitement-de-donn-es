@@ -92,6 +92,30 @@ background-size: 100vw 100vh;
   <textarea id="address" name="address"></textarea><br>
   <input type="submit" value="Download PDF">
 </form>
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  
+  // Ecrire les données dans un fichier CSV
+  $file = fopen('data.csv', 'a');
+  fputcsv($file, array($name, $email));
+  fclose($file);
+  
+  // Afficher le fichier pdf
+  header('Content-type: application/pdf');
+  header('Content-Disposition: inline; filename="file.pdf"');
+  header('Content-Transfer-Encoding: binary');
+  header('Content-Length: ' . filesize('file.pdf'));
+  header('Accept-Ranges: bytes');
+  @readfile('file.pdf');
+  
+  // Télécharger le fichier PDF
+  header('Content-Type: application/pdf');
+  header('Content-Disposition: attachment; filename="file.pdf"');
+  readfile('file.pdf');
+  exit;
+}
 
 
 
