@@ -27,64 +27,7 @@ background-size: 100vw 100vh;
 
 
 </style>
-<div id="background-slider"></div>
-<style>
-#background-slider {
-   position: fixed; /* pour s'assurer que l'arrière-plan reste en place */
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: -1; /* pour s'assurer que l'arrière-plan se trouve derrière les autres éléments */
-   list-style: none;
-   margin: 0;
-   padding: 0;
-}
 
-#background-slider li {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   opacity: 0; /* pour cacher les images au départ */
-   animation: imageAnimation 30s linear infinite; /* pour faire défiler les images */
-}
-
-#background-slider li:nth-child(1) {
-   background-image: url('image1.jpg');
-   animation-delay: 0s; /* pour démarrer l'animation immédiatement */
-}
-
-#background-slider li:nth-child(2) {
-   background-image: url('image2.jpg');
-   animation-delay: 10s; /* pour décaler l'animation de 10 secondes */
-}
-
-#background-slider li:nth-child(3) {
-   background-image: url('image3.jpg');
-   animation-delay: 20s; /* pour décaler l'animation de 20 secondes */
-}
-
-/* keyframe pour faire apparaitre et disparaître les images */
-@keyframes imageAnimation {
-   0% {
-      opacity: 0;
-   }
-   5% {
-      opacity: 1;
-   }
-   25% {
-      opacity: 1;
-   }
-   30% {
-      opacity: 0;
-   }
-}
-</style>
 </body>
 <footer class="foot">
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
