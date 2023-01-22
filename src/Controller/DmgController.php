@@ -51,4 +51,11 @@ class DmgController extends AbstractController
             'controller_name' => 'DmgController',
         ]);
     }
+    #[Route('/dmg/cv', name: 'app_dmg_cv')]
+    public function cv(): Response
+    {
+        return $this->render('dmg/cv.pdf', [
+            'controller_name' => 'DmgController',
+        ]);
+    }
 }
