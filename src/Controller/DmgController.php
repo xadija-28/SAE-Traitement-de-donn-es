@@ -51,11 +51,4 @@ class DmgController extends AbstractController
             'controller_name' => 'DmgController',
         ]);
     }
-    #[Route('/dmg/cvp', name: 'app_dmg_cvp')]
-    public function cvp(): Response
-    {
-        return $this->render('dmg/cvp.html.twig', [
-            'controller_name' => 'DmgController',
-        ]);
-    }
 }
