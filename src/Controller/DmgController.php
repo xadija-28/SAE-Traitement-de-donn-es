@@ -44,4 +44,11 @@ class DmgController extends AbstractController
             'controller_name' => 'DmgController',
         ]);
     }
+    #[Route('/dmg/modif', name: 'app_dmg_modif')]
+    public function modif(): Response
+    {
+        return $this->render('dmg/modif.html.twig', [
+            'controller_name' => 'DmgController',
+        ]);
+    }
 }
