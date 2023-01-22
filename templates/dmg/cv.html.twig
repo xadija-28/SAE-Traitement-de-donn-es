@@ -107,17 +107,8 @@ background-size: 100vw 100vh;
   <input type="submit" value="Download PDF" onclick="downloadFile('templates/dmg/cv.pdf')">
 
 </form>
-function downloadFile(fileURL) {
-  var link = document.createElement("a");
-  link.download = fileURL;
-  link.href = fileURL;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-  delete link;
-}
 
-{#<?php
+#<?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $name = $_POST['name'];
   $email = $_POST['email'];
@@ -140,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   header('Content-Disposition: attachment; filename="file.pdf"');
   readfile('file.pdf');
   exit;
-}#}
+}
 
 <footer class="foot">
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
