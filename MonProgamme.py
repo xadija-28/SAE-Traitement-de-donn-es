@@ -5,11 +5,8 @@ Created on Thu Jan 25 09:58:47 2024
 @author: userlocal
 """
 import csv
-import webbrowser
 import matplotlib.pyplot as plt #pour tracer les graphes 
 import numpy as np #pour faire des calculs numeriques 
-
-
 
 #ouvrir le fichier "fichieratraiter.txt"
 fichier=open("fichier a traiter.txt", "r")
@@ -179,37 +176,39 @@ plt.savefig("graphe2.png")
 plt.show()
 
 #contenu de la page web = web page content
-htmlcontenu='''
+# Contenu de la page Markdown
+markdown_content = f'''
 # Traitement des données
 
-## Khadidiatou Ba A1
+## Bineta - Projet SAE 15
 
-### Projet SAE 15
+Sur cette page web, nous vous présentons les informations et données pertinentes trouvées dans le fichier à traiter.
 
-Sur cette page web je vais vous présenter les informations et données pertinentes que j'ai trouvées dans le fichier à traiter.
-
-### Nombre total des trames échangées
-%s
+### Nombre total de trames échangées
+{framecounter[0]}
 
 ### Drapeaux (Flags)
-- Nombre de flags [P] (PUSH) = %s
-- Nombre de flags [S] (SYN) = %s 
-- Nombre de flag [.] (ACK) = %s
+- Nombre de flags [P] (PUSH): {flagcounterP[0]}
+- Nombre de flags [S] (SYN): {flagcounterS[0]}
+- Nombre de flag [.] (ACK): {flagcounter[0]}
 
-![Graphique 1](graphe1.png)
+![Diagramme des drapeaux](graphe1.png)
 
-### Nombre des requêtes et réponses
-- Requêtes = %s
-- Réponses = %s
+### Nombre de requêtes et réponses
+- Request: {requestcounter[0]}
+- Reply: {replycounter[0]}
 
-![Graphique 2](graphe2.png)
+![Diagramme des requêtes et réponses](graphe2.png)
 
 ### Statistiques entre seq, win et ack
-- Nombre de seq = %s
-- Nombre de win = %s
-- Nombre de ack = %s
+- Nombre de seq: {seqcounter[0]}
+- Nombre de win: {wincounter[0]}
+- Nombre de ack: {ackcounter[0]}
+'''
 
-'''%(framecounter,flagcounterP,flagcounterS,flagcounter,requestcounter,replycounter,seqcounter,wincounter,ackcounter)
+
+
+'''%(framecounter,flagcounterP,flagcounterS,flagcounter,requestcounter,replycounter,seqcounter,wincounter,ackcounter)'''
 
 #ouverture d'un fichier csv = open a csv file for data extracted from txt file untreated
 with open('Khadi.csv', 'w', newline='') as fichiercsv:
@@ -226,10 +225,11 @@ with open('khadija.csv', 'w', newline='') as fichier2:
     fichier2.close()
    
 #partie page  web = open a web page with important information and statistics
-with open("Khadidiatou.html","w") as html:
-    html.write(htmlcontenu)
-    print("page web creee avec succès")
+ #Créer un fichier Markdown
+with open("data.md", "w") as markdown_file:
+    markdown_file.write(markdown_content)
+    print("Page Markdown créée avec succès.")
 
-      
+ 
 fichier.close()
 
