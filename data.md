@@ -1,11 +1,11 @@
 
-# Traitement des données
+# Traitement des donnÃ©es
 
-## Bineta - Projet SAE 15
+## Khadidiatou Ba - Projet SAE 15
 
-Sur cette page web, nous vous présentons les informations et données pertinentes trouvées dans le fichier à traiter.
+Sur cette page web, nous vous prÃ©sentons les informations et donnÃ©es pertinentes trouvÃ©es dans le fichier Ã  traiter.
 
-### Nombre total de trames échangées
+### Nombre total de trames Ã©changÃ©es
 11016
 
 ### Drapeaux (Flags)
@@ -15,11 +15,11 @@ Sur cette page web, nous vous présentons les informations et données pertinentes
 
 ![Diagramme des drapeaux](graphe1.png)
 
-### Nombre de requêtes et réponses
+### Nombre de requÃªtes et rÃ©ponses
 - Request: 42
 - Reply: 42
 
-![Diagramme des requêtes et réponses](graphe2.png)
+![Diagramme des requÃªtes et rÃ©ponses](graphe2.png)
 
 ### Statistiques entre seq, win et ack
 - Nombre de seq: 8201
