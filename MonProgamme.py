@@ -180,7 +180,7 @@ plt.show()
 markdown_content = f'''
 # Traitement des données
 
-## Bineta - Projet SAE 15
+## Khadidiatou Ba A1 - Projet SAE 15
 
 Sur cette page web, nous vous présentons les informations et données pertinentes trouvées dans le fichier à traiter.
 
