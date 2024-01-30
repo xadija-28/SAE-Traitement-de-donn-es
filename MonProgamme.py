@@ -100,34 +100,54 @@ ipdesti2 = []
 ipdestifinale=[]            
                
 for i in ipsr:
+    # Si l'adresse IP ne contient pas de points, elle est ajoutée directement à la liste ipsource2.
     if not "." in i:
         ipsource2.append(i)
+    # Sinon, si l'adresse IP contient "ssh" dans sa chaîne, si sa longueur est supérieure à 15, ou si elle contient la lettre "B", elle est traitée pour la normalisation.
     elif "ssh" in i or len(i) > 15 or "B" in i:
+        # Divise l'adresse IP en morceaux en utilisant le point comme délimiteur.
         ports = i.split(".")
+        # Supprime le dernier morceau de l'adresse IP, qui est généralement le numéro de port.
         del ports[-1]
+        # Initialise une variable delim avec le point comme valeur.
         delim = "."
+        # Rejoint les morceaux restants avec le point comme délimiteur pour obtenir une adresse IP sans numéro de port.
         delim = delim.join(ports)
+        # Ajoute l'adresse IP modifiée à la liste ipsource2.
         ipsource2.append(delim)
+    # Si l'adresse IP ne répond à aucune des conditions précédentes, elle est ajoutée telle quelle à la liste ipsource2.
     else:
         ipsource2.append(i)
+
 for j in ipde:
+    # Si l'adresse IP de destination ne contient pas de points, elle est ajoutée directement à la liste ipdesti2.
     if not "." in j:
         ipdesti2.append(j)
+    # Sinon, si l'adresse IP de destination contient "ssh" dans sa chaîne, si sa longueur est supérieure à 15, ou si elle contient la lettre "B", elle est traitée pour la normalisation.
     elif "ssh" in j or len(j) > 15 or "B" in j:
+        # Divise l'adresse IP de destination en morceaux en utilisant le point comme délimiteur.
         ports = j.split(".")
+        # Supprime le dernier morceau de l'adresse IP de destination, qui est généralement le numéro de port.
         del ports[-1]
+        # Initialise une variable delim avec le point comme valeur.
         delim = "."
+        # Rejoint les morceaux restants avec le point comme délimiteur pour obtenir une adresse IP de destination sans numéro de port.
         delim = delim.join(ports)
+        # Ajoute l'adresse IP de destination modifiée à la liste ipdesti2.
         ipdesti2.append(delim)
+    # Si l'adresse IP de destination ne répond à aucune des conditions précédentes, elle est ajoutée telle quelle à la liste ipdesti2.
     else:
         ipdesti2.append(j)
 
 for l in ipdesti2:
+    # Si l'adresse IP de destination ne contient pas de deux-points (:), elle est ajoutée directement à la liste ipdestifinale.
     if not ":" in l:
         ipdestifinale.append(l)
+    # Sinon, l'adresse IP de destination est divisée en utilisant le deux-points comme délimiteur, et seul le premier morceau est ajouté à la liste ipdestifinale pour supprimer les informations de port potentielles.
     else:
         deuxp = l.split(":")
-        ipdestifinale.append(deuxp[0])   '''
+        ipdestifinale.append(deuxp[0])
+  '''
 
             
 globalflagcounter=flagcounter+flagcounterP+flagcounterS
