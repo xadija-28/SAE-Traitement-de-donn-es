@@ -1,9 +1,21 @@
-<mxfile host="app.diagrams.net" modified="2024-02-08T07:49:42.351Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0" version="23.0.1" etag="LcGANVEwZoMGEtGq6LGu" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-08T08:07:53.001Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="7bL1bUL9-2gypETqBPmF" version="23.0.1" type="github">
   <diagram name="Page-1" id="-7r7Z-f3XVGiwXPn8XcL">
-    <mxGraphModel>
+    <mxGraphModel dx="1050" dy="538" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ASq-XUtW5CoV-P0M0Zhf-2" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.server;" vertex="1" parent="1">
+          <mxGeometry x="100" y="140" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ASq-XUtW5CoV-P0M0Zhf-3" value="pool 192.168.143.49--58" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="70" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ASq-XUtW5CoV-P0M0Zhf-4" value="DHCP:192.168.143.60" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="50" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ASq-XUtW5CoV-P0M0Zhf-5" value="DHCP:192.168.143.60" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="100" width="130" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
